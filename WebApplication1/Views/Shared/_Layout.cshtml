@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/tiny-slider.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="custom-navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+        <div class="container">
+            <img src="~/122.png" alt="~/122.png" />
+
+            <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarsFurni" aria-label="Toggle navigation" type="button" data-bs-target="#navbarsFurni" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsFurni">
+                <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item active"></li>
+                    <li><a class="nav-link" href="@Url.Action("Index","Home")">Home</a></li>
+                    <li><a class="nav-link" href="@Url.Action("About","Home")">About us</a></li>
+                    <li><a class="nav-link" href="@Url.Action("Contact","Home")">Contact</a></li>
+                    <li><a class="nav-link" href="@Url.Action("Services","Home")">Services</a></li>
+                    <li><a class="nav-link" href="@Url.Action("Shop","Home")">Shop</a></li>
+                    <li><a class="nav-link" href="@Url.Action("uil","Home")">uil</a></li>
+                </ul>
+
+                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                    <li><a class="nav-link" href="#"><img src="~/images/user.svg"></a></li>
+                    <li><a class="nav-link" href="cart.html"><img src="~/images/cart.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <!-- Add any additional scripts here -->
+    @RenderSection("scripts", required: false)
+
+    @RenderBody()
+</body>
+</html>
